@@ -12,7 +12,6 @@ def test_valid_body(create_account_page, customer_account, create_test_data):
 
 
 def test_empty_body(create_account_page):
-    create_account_page.open_page()
     create_account_page.find(CREATE_ACCOUNT_BTN_LOC).click()
     create_account_page.check_length_of_elems(EMPTY_FIELD_ERROR_LOC, 5)
     create_account_page.check_page_endpoint_is_correct()
