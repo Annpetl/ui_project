@@ -21,10 +21,13 @@ class CreateAccount(BasePage):
         self.find(EMAIL_LOC).send_keys(email)
         self.find(PASSWORD_LOC).send_keys(password)
         self.find(PASSWORD_CONFIRM_LOC).send_keys(password_confirm)
-        self.find(CREATE_ACCOUNT_BTN_LOC).click()
+        self.click(CREATE_ACCOUNT_BTN_LOC)
 
+    def click_account_button(self):
+        self.click(CREATE_ACCOUNT_BTN_LOC)
 
+    def check_empty_field_messages_count_is(self, count):
+        assert len(self.find_all(EMPTY_FIELD_ERROR_LOC)) == count
 
-
-
-
+    def check_password_confirm_error_msg_is(self, text):
+        assert self.get_text(PASSWORD_CONFIRM_ERROR_LOC) == text
