@@ -6,3 +6,6 @@ SUCCESS_CREATE_MSG_LOC = (By.CSS_SELECTOR, '[data-bind="html: $parent.prepareMes
 
 class CustomerAccount(BasePage):
     page_endpoint = '/customer/account/'
+
+    def check_success_create_msg_is(self, text):
+        assert self.get_text(SUCCESS_CREATE_MSG_LOC) == text
