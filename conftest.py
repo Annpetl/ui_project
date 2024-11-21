@@ -20,24 +20,18 @@ def driver():
 
 
 @pytest.fixture()
-def sale_page(driver):
-    sale_page = SalePage(driver)
-    sale_page.open_page()
-    return sale_page
+def sale(driver):
+    return SalePage(driver)
 
 
 @pytest.fixture()
-def eco_friendly_page(driver):
-    eco_friendly_page = EcoFriendly(driver)
-    eco_friendly_page.open_page()
-    return eco_friendly_page
+def eco_friendly(driver):
+    return EcoFriendly(driver)
 
 
 @pytest.fixture()
-def create_account_page(driver):
-    create_account_page = CreateAccount(driver)
-    create_account_page.open_page()
-    return create_account_page
+def create_account(driver):
+    return CreateAccount(driver)
 
 
 @pytest.fixture()
