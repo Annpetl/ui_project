@@ -14,6 +14,7 @@ from pages.eco_friendly_page import EcoFriendly
 def driver():
     options = Options()
     options.add_argument('--force-device-scale-factor=0.75')
+    options.add_argument('--headless')
     chrome_driver = webdriver.Chrome(options=options)
     chrome_driver.set_window_size(900, 1250)
     return chrome_driver
