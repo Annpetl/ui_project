@@ -7,7 +7,7 @@ LAST_NAME_LOC = (By.ID, "lastname")
 EMAIL_LOC = (By.ID, "email_address")
 PASSWORD_LOC = (By.ID, "password")
 PASSWORD_CONFIRM_LOC = (By.ID, "password-confirmation")
-CREATE_ACCOUNT_BTN_LOC = (By.CSS_SELECTOR, "[title = 'Create an Account']")
+CREATE_ACCOUNT_BTN_LOC = (By.CSS_SELECTOR, "#form-validate > div > div.primary > button")
 EMPTY_FIELD_ERROR_LOC = (By.XPATH, "//*[text()='This is a required field.']")
 PASSWORD_CONFIRM_ERROR_LOC = (By.ID, "password-confirmation-error")
 

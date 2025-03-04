@@ -1,3 +1,6 @@
+import time
+
+
 def test_successful_registration(create_account, customer_account, create_test_data):
     create_account.open_page()
     create_account.fill_in_form(create_test_data['name'], create_test_data['last_name'], create_test_data['email'],

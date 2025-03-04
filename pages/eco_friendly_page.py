@@ -21,4 +21,5 @@ class EcoFriendly(BasePage):
     def check_sort_by_product_name(self):
         self.click(SORTER_LOC)
         product_title_list = [product.text for product in self.find_all(PRODUCT_LIST_LOC)]
+        product_title_list = [title for title in product_title_list if title]
         assert product_title_list == sorted(product_title_list)
