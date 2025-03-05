@@ -34,3 +34,7 @@ jobs:
         if: "github.event.inputs.deployment_target == 'smoke'" 
         run: pytest -m smoke
         continue-on-error: true
+      - name: run all tests
+        if: "github.event.inputs.deployment_target == 'all'" 
+        run: pytest 
+        continue-on-error: true
